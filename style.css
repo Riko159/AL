@@ -76,7 +76,7 @@ body {
   position: relative;
   margin: 0 auto;
   max-width: 100%;
-  overflow-x: auto;
+  overflow-x: auto; 
   -webkit-overflow-scrolling: touch; 
 }
 
@@ -134,7 +134,7 @@ table td.icon.html{
 
 /* ========== Responsive Media Queries ========== */
 @media screen and (max-width: 600px) {
-  .page-title {
+ .page-title {
     font-size: 1.5rem;
     padding: 16px;
   }
@@ -142,13 +142,13 @@ table td.icon.html{
     flex-direction: column;
     padding: 1rem;
   }
-  .responsive-img {
+ .responsive-img {
   max-width: 100%;
   height: auto;
   padding: 16px 24px;
   margin: 20px auto;
   display: block;
-}
+ }
   .main-buttons a.button {
     flex: 1 1 100%;
   }
@@ -221,14 +221,16 @@ form label {
 .incorrect {
   color: blue;
 }
+.quiz-with-img {
+  position: relative;
+}
 
-.eat-img {
-  position: absolute ;
-  bottom: 3px;
-  left: 70%;
-  right: 0;
-  width: 100px; 
-  margin: 10px
+.quiz-img-bottom-right {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 80px;
+  height: auto;
 }
 
 .profile {
@@ -264,12 +266,13 @@ form label {
   border-collapse: collapse;
 }
 
-.food-table .row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  margin: 40px 0;
+
+.food-table .kimchi-row td:first-child {
+  order: 2;
+}
+
+.food-table .kimchi-row td:last-child {
+  order: 1;
 }
 
 .food-table td {
@@ -279,6 +282,12 @@ form label {
 }
 
 @media screen and (min-width: 601px) {
+  .quiz-container label {
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+
   .food-table .row {
     flex-wrap: nowrap;
   }
