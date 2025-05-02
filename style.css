@@ -6,7 +6,13 @@ body {
   background-color: #fff;
   color: #000;
 }
-
+.page-title {
+  font-size: 2rem;
+  text-align: center;
+  padding: 20px;
+  font-weight: bold;
+  color: #000;
+}
 .main-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -127,6 +133,10 @@ table td.icon.html{
 
 /* ========== Responsive Media Queries ========== */
 @media screen and (max-width: 600px) {
+  .page-title {
+    font-size: 1.5rem;
+    padding: 16px;
+  }
   .main-buttons {
     flex-direction: column;
     padding: 1rem;
