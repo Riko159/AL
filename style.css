@@ -1,19 +1,30 @@
-﻿
-.main-buttons {
-   display: block;
-   margin: 1.0rem auto;
-   padding: 1rem 2rem; 
-   font-size: 1.2rem;
-   border-radius: 10px;
-   width: 90%;
-   max-width: 500px;
+/* ========== General Layout ========== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #000;
+}
 
+/* ========== Responsive Buttons ========== */
+.main-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 1.0rem auto;
+  padding: 1rem 2rem; 
+  font-size: 1.2rem;
+  max-width: 500px;
+  width: 90%;
 }
 
 .main-buttons a.button {
   display: block;
   position: relative;
-  margin: 1.0rem auto;
+  margin: 0.5rem;
   padding: 10px 20px;
   text-decoration: none;
   font-weight: 500;
@@ -23,6 +34,8 @@
   border-radius: 10px;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
+  flex: 1 1 40%;
+  text-align: center;
 }
 
 .main-buttons a.button span {
@@ -55,6 +68,7 @@
   text-shadow: none;
 }
 
+/* ========== Responsive Table ========== */
 .table-container {
   position: relative;
   margin: 0 auto;
@@ -82,7 +96,7 @@ table tr:hover{
 table th, table td {
   text-align: center;
   padding: 15px 10px;
-  white-space: nowrap;  /
+  white-space: nowrap;
 }
 
 table td.icon{
@@ -94,6 +108,7 @@ table td.icon{
   max-width: 80%;
 }
 
+/* ========== Icon Images ========== */
 table td.icon.restaurant{
   background-image: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEglkhJhAEEFD7lSbiMrysg6PJgyq5zSOcAJTybZIdJRO8Oyfppk9tA0086z1fqi60m4y8NRRY7B7yBMumXTWzav-v96DAJpQOCgjAhk8cqy8BL3Os3fAsgwIDt1CCzB3y1QNPSM5JMpZCT1/s1600/building_food_family_restaurant.png)
 }
@@ -113,6 +128,39 @@ table td.icon.rate{
 table td.icon.html{
   background-image: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtvoVlGk_EhVUs-_-OpfhwsZfY1hKEQZEYOiOBffH52ijMU5Yjh1Xa40woiy_bPF8EPB3HWhwRzTR6R1OrbjDMXyLrmr8knDUgajd7y2r2JzYjeMoOLmWk2AuDloDEEX9rasicthjmoYMY/s800/computer_programming_woman.png)
 }
+
+/* ========== Responsive Media Queries ========== */
+@media screen and (max-width: 600px) {
+  .main-buttons {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .main-buttons a.button {
+    flex: 1 1 100%;
+  }
+
+  table {
+    min-width: unset;
+    font-size: 14px;
+  }
+
+  .quiz-container {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .profile {
+    width: 90%;
+  }
+
+  iframe {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+/* ========== その他の既存スタイルそのまま ========== */
 form label {
   position: relative;
   display: block;          
@@ -126,15 +174,15 @@ form label {
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 20px;
-  }
+}
 
-  .quiz-container label {
+.quiz-container label {
     display: flex;
     align-items: center;
     gap: 8px;
     margin-bottom: 8px;
     margin-left: 38%;
-  }
+}
 
 .quiz-container {
       background-color: rgba(255, 240, 245, 0.8); 
@@ -143,12 +191,12 @@ form label {
       margin: 30px auto;
       width: 60%;
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-    }
+}
 
 .quiz-container h1 {
       font-size: 20px;
       margin-bottom: 15px;
-    }
+}
 
 .answer {
   display: none;
@@ -206,34 +254,40 @@ form label {
 
 .food-table .row {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   margin: 40px 0;
 }
 
-.food-table .row:nth-child(odd) td:first-child {
-  order: 1;
-}
-
-.food-table .row:nth-child(odd) td:last-child {
-  order: 2;
-}
-.food-table .reverse {
-  flex-direction: row-reverse;
-}
-
-
-.food-table .row:nth-child(even) td:first-child {
-  order: 2;
-}
-
-.food-table .row:nth-child(even) td:last-child {
-  order: 1;
-}
-
 .food-table td {
-  width: 50%;
+  width: 100%;
   padding: 20px;
   text-align: center;
 }
 
+@media screen and (min-width: 601px) {
+  .food-table .row {
+    flex-wrap: nowrap;
+  }
+
+  .food-table td {
+    width: 50%;
+  }
+
+  .food-table .row:nth-child(odd) td:first-child {
+    order: 1;
+  }
+
+  .food-table .row:nth-child(odd) td:last-child {
+    order: 2;
+  }
+
+  .food-table .row:nth-child(even) td:first-child {
+    order: 2;
+  }
+
+  .food-table .row:nth-child(even) td:last-child {
+    order: 1;
+  }
+}
