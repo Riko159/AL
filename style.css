@@ -290,6 +290,9 @@ form label {
   .quiz-img-bottom-right {
     width: 100px;
   }
+  .food-table.container {
+    -webkit-overflow-scrolling: touch;
+  }
   .food-table .row {
     flex-wrap: nowrap;
   }
