@@ -7,14 +7,6 @@ body {
   color: #000;
 }
 
-.responsive-img {
-  max-width: 100%;
-  height: auto;
-  padding: 16px 24px;
-  margin: 20px auto;
-  display: block;
-}
-
 .main-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -139,7 +131,13 @@ table td.icon.html{
     flex-direction: column;
     padding: 1rem;
   }
-
+  .responsive-img {
+  max-width: 100%;
+  height: auto;
+  padding: 16px 24px;
+  margin: 20px auto;
+  display: block;
+}
   .main-buttons a.button {
     flex: 1 1 100%;
   }
