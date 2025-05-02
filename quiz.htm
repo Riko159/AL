@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>Quiz About Me</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    
+
+
+  </style>
+</head>
+
+<body>
+
+  <center>
+  <div style="padding: 40px 45px ; background-size: 1px 1px; 
+       background-position: 10px 0, 0 10px, right 10px top 0, left 0 bottom 10px; 
+       background-repeat: repeat-y, repeat-x, repeat-y, repeat-x; 
+       background-image: linear-gradient(#C1AA9F, #C1AA9F), linear-gradient(#C1AA9F, #C1AA9F), linear-gradient(#C1AA9F, #C1AA9F), linear-gradient(#C1AA9F, #C1AA9F); 
+       color:#000000;">
+    <font size="6"><b>Quiz About Me!</b></font>
+  </div>
+
+<p align="right">
+  <script>
+    const modifiedDate = new Date(document.lastModified);
+    const options = { day: 'numeric', month: 'long', year: 'numeric' };
+    const formattedDate = modifiedDate.toLocaleDateString('en-GB', options);
+    document.write("Last Updated: " + formattedDate);
+  </script>
+</p>
+
+
+  <div class="quiz-container">
+    <h2>1. When is my birthday?</h2>
+    <form>
+      <label><input type="radio" name="quiz1" value="wrong">9 Jun 2005</label>
+      <label><input type="radio" name="quiz1" value="wrong">5 Sep 2005</label>
+      <label><input type="radio" name="quiz1" value="correct">9 May 2005</label>
+      <div class="answer" id="answer1"></div>
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjdpwgAIhV2fRXklfFcCQ2_ApOUYlziiza2F0n1Wf8Y9alI5QsOHLanI08CyqI_3VfJaCk7jNRYwVBOiBe9bCh4O_xnAKNLa48KNs8cvx5TxijxfcocHHjWamiSQYbCb0I1kit1ktmtcoFK/s1155/syokuji_girl_silent.png" alt="eat" class="eat-img">
+    </form>
+  </div>
+
+  <!-- クイズ2 -->
+  <div class="quiz-container">
+    <h2>2. Which is one of my favorite foods?</h2>
+    <form>
+      <label><input type="radio" name="quiz2" value="wrong">Kamaboko</label>
+      <label><input type="radio" name="quiz2" value="correct">Avocado</label>
+      <label><input type="radio" name="quiz2" value="wrong">French Fries</label>
+      <div class="answer" id="answer2"></div>
+    </form>
+  </div>
+
+  <!-- クイズ3 -->
+  <div class="quiz-container">
+    <h2>3. Which is the song I listen to when I want to be cool?</h2>
+    <form>
+      <label><input type="radio" name="quiz3" value="correct">世界の秘密</label>
+      <label><input type="radio" name="quiz3" value="wrong">コイスルオトメ</label>
+      <label><input type="radio" name="quiz3" value="wrong">サザンカ</label>
+      <div class="answer" id="answer3"></div>
+    </form>
+  </div>
+
+<script>
+    document.querySelectorAll("form").forEach((form, index) => {
+      const answerBox = form.querySelector(".answer");
+      form.addEventListener("change", (e) => {
+        if (e.target.name.startsWith("quiz")) {
+          const value = e.target.value;
+          if (value === "correct") {
+            answerBox.textContent = "〇 Congratulations! You're correct!";
+            answerBox.className = "answer correct";
+          } else {
+            answerBox.textContent = "× Incorrect";
+            answerBox.className = "answer incorrect";
+          }
+          answerBox.style.display = "block";
+        }
+      });
+    });
+  </script>
+<hr />
+
+<div class="main-buttons">
+  <a href="index.htm" class="button"><span>Top Page</span></a>
+  <a href="self introduction.htm" class="button"><span>Self Introduction</span></a>
+  <a href="favorite food.htm" class="button"><span>My Favorite Food</span></a>
+  <a href="favorite songs.htm" class="button"><span>My Favorite Japanese Songs</span></a>
+  
+</div>
+
+  <hr />
+  <p style="text-align: center;">
+    Please send messages if you have any comments or messages for me.<br>
+    <a href="mailto:takao.riko.y0@tufs.ac.jp">takao.riko.y0@tufs.ac.jp</a>
+  </p>
+  <hr />
+
+</center>
+</body>
+</html>
