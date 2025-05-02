@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">  
+  <title>My Favorite Food</title>
+  <link rel="stylesheet" href="style.css" />
+  
+</head>
+
+<body>
+<center>
+  <div style="padding: 40px 45px ; background-size: 1px 1px; 
+       background-position: 10px 0, 0 10px, right 10px top 0, left 0 bottom 10px; 
+       background-repeat: repeat-y, repeat-x, repeat-y, repeat-x; 
+       background-image: linear-gradient(#C1AA9F, #C1AA9F), linear-gradient(#C1AA9F, #C1AA9F), linear-gradient(#C1AA9F, #C1AA9F), linear-gradient(#C1AA9F, #C1AA9F); 
+       color:#000000;">
+    <font size="6"><b>My Favorite Food</b></font>
+  </div>
+</center>
+
+<p align="right">
+  <script>
+    const modifiedDate = new Date(document.lastModified);
+    const options = { day: 'numeric', month: 'long', year: 'numeric' };
+    const formattedDate = modifiedDate.toLocaleDateString('en-GB', options);
+    document.write("Last Updated: " + formattedDate);
+  </script>
+</p>
+
+<center>
+
+<table>
+  <table class="food-table">
+  <tr class="row">
+    <td><img src="kevin-porter-6BJxafI1hfw-unsplash.jpg" alt="avocado" height="225" width="200"></td>
+    <td>
+      <h2>1. Avocado</h2>
+      <p>They are creamy, nutrient-rich fruits. <br />
+	 I like to eat them with toast and salad. <br />
+	 It's also tasty to eat them with soy sauce.</p>
+    </td>
+  </tr>
+  <tr class="row reverse">
+    <td>
+      <h2>2. Kimchi</h2>
+      <p>Kimchi is a traditional Korean dish <br />
+	 made by fermenting vegetables. <br / >
+         My favorite way to eat this is to mix it with natto.</p>
+    </td>
+    <td><img src="portuguese-gravity-M_mDgb8guhA-unsplash.jpg" alt="kimchi" height="200" width="200"></td>
+  </tr>
+  <tr class="row">
+    <td><img src="vegetables-8032868_640.jpg" alt="stir fry" height="200" width="200"></td>
+    <td>
+      <h2>3. Stir Fry</h2>
+      <p>Stir fry with vegetables, mushrooms, and tofu <br />
+	 is easy to make <br />
+	 and allows for many flavor variations.</p>
+    </td>
+  </tr>
+</table>
+
+<hr>
+
+<div class="main-buttons">
+  <a href="index.htm" class="button"><span>Top Page</span></a>
+  <a href="self introduction.htm" class="button"><span>Self Introduction</span></a>
+  <a href="favorite songs.htm" class="button"><span>My Favorite Japanese Songs</span></a>
+  <a href="quiz.htm" class="button"><span>Quiz About Me</span></a>
+</div>
+
+<hr>
+
+<p class="contact">
+  Please send messages if you have any comments or messages for me.
+  <a href="mailto:takao.riko.y0@tufs.ac.jp">takao.riko.y0@tufs.ac.jp</a>
+</p>
+
+<hr>
+
+</center>
+</body>
+</html>
