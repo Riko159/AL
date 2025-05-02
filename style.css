@@ -287,7 +287,9 @@ form label {
   margin-right: auto;
   justify-content: center;
 }
-
+  .quiz-img-bottom-right {
+    width: 100px;
+  }
   .food-table .row {
     flex-wrap: nowrap;
   }
