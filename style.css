@@ -9,9 +9,9 @@ body {
 .page-title {
   font-size: 2rem;
   text-align: center;
+  font-family: fantasy;
   padding: 20px;
-  font-weight: bold;
-  color: #000;
+  color: #C1AA9F;
 }
 .main-buttons {
   display: flex;
