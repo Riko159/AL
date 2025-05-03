@@ -137,6 +137,8 @@ table td.icon.html{
  .page-title {
     font-size: 1.5rem;
     padding: 16px;
+   font-family: 'Pacifico', cursive;
+   
   }
   .main-buttons {
     flex-direction: column;
